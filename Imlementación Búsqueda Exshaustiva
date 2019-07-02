@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int AlgoritmoBusquedaExhaustiva(int arr[], int n, int x);
+
+
+int main()
+{
+    //BUSQUEDA Exhaustiva
+    int arreglo[10]={1,14,18,21,41};
+
+    int n=21;
+    int x;
+    
+	cout<<"Arreglo antes de: "<<endl;
+    for(int i=0;i<5;i++){
+        cout<<"["<<arreglo[i]<<"]";
+    }
+    cout<<endl;
+    cout<<"Elemnto a buscar ---> "<<n<<endl;
+	AlgoritmoBusquedaExhaustiva(arreglo,n,x);
+
+
+    return 0;
+}
+
+int AlgoritmoBusquedaExhaustiva(int arr[], int n, int x){ 
+    if (x == 4){
+        cout<<"Elemento Encontrado  :) : "<<n<<endl;
+		cout<<"Pocision del elemento ---> :"<<" "<<x;      
+		return 1;
+	}
+
+    for (int i=1; i<6; i++){
+    	AlgoritmoBusquedaExhaustiva(arr,n,x+i);
+	}
+}
